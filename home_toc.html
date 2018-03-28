@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- <link rel="stylesheet" href="/css/styles.css"> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style type="text/css">
+	body {
+	  animation: fadeIn 1s linear;
+	}
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+
+	#layout_row {
+		width: 525px;
+		height: 66px;
+		border-color: white;
+		border-style: dashed;
+	}
+	#layout_col {
+		width: 75px;
+		height: 264px;
+		max-height: 264px;
+	}
+	#icon_box {
+		width: 75px;
+		height: 66px;
+		border-color: white;
+		border-style: solid;
+		float: left;
+	}
+	#entrance_text {
+		font-family: 'Cabin', sans-serif;
+		font-size: 28px;
+		text-align: center;
+		word-wrap: break-word;
+	}
+
+	.icon {
+	    position: relative;
+	    display: inline-block;
+	}
+	.icon .text_popup {
+		visibility: hidden;
+	    visibility: hidden;
+	    width: 120px;
+	    background-color: black;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 6px;
+	    padding: 5px 0;
+	    font-size: 20px;
+	    
+	    /* Position the tooltip */
+	    position: absolute;
+	    z-index: 1;
+	    bottom: 100%;
+	    left: 50%;
+	    margin-left: -60px;
+	}
+	.icon:hover .text_popup {
+	    visibility: visible;
+	}
+</style>
+
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
+	<meta charset="UTF-8">
+</head>
+
+<body style="width:850px; height: 630px">
+
+<div style="margin-left: 160px; margin-right: 160px; margin-top: 70px;">
+	<div id="layout_row">
+		<div style="width: 150px; height: 66px; float: left;"></div>
+		<div id="icon_box">
+			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; margin-top: 70%"></div>
+		</div>
+		<div id="icon_box" style="float: left;">
+			<div class="icon">
+				<div id="jjm_icon">
+				<span class="text_popup">Jin Jun Mei Black Tea</span>
+				<img class="i" src="img/jjm_icon.jpg" style="max-width: 100%; max-height: 100%;">
+				</div>
+			</div>
+		</div>
+		<div id="icon_box">
+			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; float: right; margin-top: 70%"></div>
+		</div>
+	</div>
+	<div id="layout_row">
+		<div style="width: 75px; height: 66px; float: left;"></div>
+		<div id="icon_box">
+			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%;"></div>
+		</div>
+		<div style="width: 225px; height: 66px; float: left;"></div>
+		<div id="icon_box">
+			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%; float: right;"></div>
+		</div>
+	</div>
+	<div id="layout_col" style="float: left;">
+		<div id="icon_box" style="float: none;">
+			<div class="icon">
+				<div id="lj_icon">
+				<span class="text_popup">Long Jing Green Tea</span>
+				<img src="img/lj_icon.jpg" style="max-width: 100%; max-height: 100%;">
+				</div>
+			</div>
+		</div>
+			<div id="icon_box" style="float: none;">
+			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%;"></div>
+		</div>
+		<div id="icon_box" style="float: none;">
+			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%;"></div>
+		</div>
+		<div id="icon_box" style="float: none;">
+			<div class="icon">
+				<div id="ajbc_icon">
+				<span class="text_popup">Anji Bai Cha</span>
+				<img src="img/ajbc_icon.jpg" style="max-width: 100%; max-height: 100%;">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="layout_col" style="width: 375px; display: inline-block; overflow: hidden;">
+		<div id="entrance_text" style="max-height: 264px">
+		<a href="#">
+			<br>
+			<br>Welcome
+			<br>to
+			<br>tea culture
+		</a>
+		</div>
+		<script  src="js/entranceText.js"></script>
+	</div>
+	<div id="layout_col" style="float: right;">
+		<div id="icon_box" style="float: none;">
+			<div class="icon">
+				<div id="tgy_icon">
+				<span class="text_popup">Tie Guan Yin Oolong</span>
+				<img src="img/tgy_icon.jpg" style="max-width: 100%; max-height: 100%;">
+				</div>
+			</div>
+		</div>
+		<div id="icon_box" style="float: none;">
+			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%; float: right;"></div>
+		</div>
+		<div id="icon_box" style="float: none;">
+			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; float: right;"></div>
+		</div>
+		<div id="icon_box" style="float: none;">
+			<div class="icon">
+				<div id="blc_icon">
+				<span class="text_popup">Bi Luo Chun</span>
+				<img src="img/blc_icon.png" style="max-width: 100%; max-height: 100%;">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="layout_row">
+		<div style="width: 75px; height: 66px; float: left;"></div>
+		<div id="icon_box">
+			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; margin-top: 70%"></div>
+		</div>
+		<div style="width: 225px; height: 66px; float: left;"></div>
+		<div id="icon_box">
+			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; float: right; margin-top: 70%"></div>
+		</div>
+	</div>
+	<div id="layout_row">
+		<div style="width: 150px; height: 66px; float: left;"></div>
+		<div id="icon_box">
+			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%;"></div>
+		</div>
+		<div id="icon_box">
+			<div class="icon">
+				<div id="pe_icon">
+				<span class="text_popup">Pu Erh Tea</span>
+				<img src="img/pe_icon.jpg" style="max-width: 100%; max-height: 100%;">
+				</div>
+			</div>
+		</div>
+		<div id="icon_box">
+			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%; float: right;"></div>
+		</div>
+</div>
+
+</body>
+
+</html>
+
