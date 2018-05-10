@@ -5,74 +5,95 @@
 	<link rel="stylesheet" href="css/details.css">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
-	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/loadDetails.js"></script>
+
 	<meta charset="UTF-8">
 	<title>Long Jing</title>
 </head>
 
 <body>
 
-<div class="top_bar">
-	<a href="index.html">
-		<img src="img/cha_icon.png"">
-	</a>
-</div>
-
-<div class="side_bar">
-	<a href="ajbc.html">
-		<img src="img/ajbc_icon.jpg">
-	</a>
+<div class="left">
+	<div class="tl">
+		<a href="index.html">
+			<img id="chaIcon" src="img/cha_icon.png">
+		</a>
+	</div>
+	<div class="bl">
+		<a href="ajbc.html">
+			<img class="navIcon" src="img/ajbc_icon_bg.png">
+		</a>
+	</div>
 </div>
 
 <div class="center">
-	<img src="img/lj_icon.jpg" style="display: block; margin-left: auto; margin-right: auto; height: 100%; max-height: 100%;">
-	<div id="bg_overlay"></div>
-	<div class="text_body">
-		<div style="width: 100%; height: 80px; margin-top: 30px; font-size: 35px; font-family: 'Cabin', sans-serif; text-align: center;">
-			Long Jing Green Tea
+	<img src="img/lj_icon_bg.png" style="max-width: 100%; max-height: 100%;">
+	<div class="text_body" style="margin-top: 130px; margin-left: 60px; width: 350px;">
+		<div id="cn" style="display: none; margin-left: 90px;">
+寒冷若你
+<br>
+茶将为之温暖
+<br>
+激愤若你
+<br>
+茶将为之安定
+<br>
+沮丧若你
+<br>
+茶将为之开怀
+<br>
+疲惫若你
+<br>
+茶将为之抚慰
 		</div>
-		Longjing tea sometimes called by
-		its literal translated name Dragon
-		Well tea, is a variety of pan-roasted
-		green tea from the area of
-		Longjing Village near Hangzhou
-		in Zhejiang Province, China. It is
-		produced mostly by hand and renowned
-		for its high quality, earning
-		it the China Famous Tea title.
-		Like most other Chinese green
-		tea, Longjing tea leaves are roasted
-		early in processing (after picking)
-		to stop the natural oxidation
-		process, which is a part of creating
-		black and oolong teas. The actions
-		of these enzymes are stopped
-		by “firing” (heating in pans) or by
-		steaming the leaves before they
-		completely dry out. As is the case
-		with other green teas (and white
-		teas), Longjing tea leaves experience
-		minimal oxidation. When
-		steeped, the tea produces a yellow-green
-		color. The tea contains
-		vitamin C, amino acids, and, like
-		most finer Chinese green teas, has
-		one of the highest concentrations
-		of catechins among teas.
+		<div id="en" style="font-size: 19px; line-height: 2; margin-top: 50px;font-family:wwt;">
+If you are cold,Tea will warm you.
+<br>
+If you are too heated,Tea will cold you.
+<br>
+If you are depressed,Tea will cheer you.
+<br>
+If you are exhausted,Tea will calm you.
+		</div>
 	</div>
-</div>
-<div class="side_bar">
-	<a href="jjm.html">
-		<img src="img/jjm_icon.jpg">
-	</a>
-</div>
+	<script language="javascript">
+		document.getElementsByClassName("text_body")[0].onmouseover = function() {
+			changeLanguage("en");
+		}
+		document.getElementsByClassName("text_body")[0].onmouseout = function() {
+			changeLanguage("cn");
+		}
+	</script>
 
 </div>
+<div class="right">
+	<div class="tr">
+		<img id="pot" src="img/pot_4.png" style="max-width: 100%; max-height: 100%">
+	</div>
+	<div class="br">
+		<a href="jjm.html">
+			<img class="navIcon" src="img/jjm_icon_bg.png">
+		</a>
+	</div>
 
+	<script type="text/javascript">
+		var navIcons = document.getElementsByClassName("navIcon");
+		for (let i = 0; i < navIcons.length; i++) {
+			navIcons[i].onmouseover = function() {
+				navIcons[i].style.maxWidth = "120%";
+				navIcons[i].style.maxHeight = "120%";
+			};
+			navIcons[i].onmouseout = function() {
+				navIcons[i].style.maxWidth = "100%";
+				navIcons[i].style.maxHeight = "100%";	
+			}
+		}
+	</script>
+</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script  src="js/loadDetails.js"></script>
 
 </body>
 

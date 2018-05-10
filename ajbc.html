@@ -6,78 +6,98 @@
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/loadDetails.js"></script>
+
 	<meta charset="UTF-8">
 	<title>Anji Bai Cha</title>
 </head>
 
 <body>
 
-<div class="top_bar">
-	<a href="index.html">
-		<img src="img/cha_icon.png"">
-	</a>
-</div>
-
-<div class="side_bar">
-	<a href="pe.html">
-		<img src="img/pe_icon.jpg">
-	</a>
-</div>
-
-<div class="center">
-	<img src="img/ajbc_icon.jpg" style="display: block; margin-left: auto; margin-right: auto; height: 100%; max-height: 100%;">
-	<div id="bg_overlay"></div>
-	<div class="text_body">
-		<div style="width: 100%; height: 80px; margin-top: 30px; font-size: 35px; font-family: 'Cabin', sans-serif; text-align: center;">
-			Anji Bai Cha
-		</div>
-		Fresh and creamy soft with notes
-		of citrus and nuts. From Anji, the
-		town of dense bamboo forests and
-		tea cultivation, comes this Anji Bai
-		Cha, one of the rarest of all Chinese
-		teas. With long, delicate, vivid green
-		leaves, Anji white tea is beautiful in
-		every sense of the word. A green
-		tea connoisseur’s dream.
-		this tea is normally processed according
-		to the normal green tea
-		processing methodology. This
-		means that it is not any different
-		from green tea. White in this
-		case refers to the Camelia Sinenses
-		plant. This type of plant is whiter
-		than other green tea plants that
-		you will find in different parts of the
-		world
-		<br>
-		Anji tea has been proven to come
-		with different health benefits that
-		make it worth purchasing.
-		<br>
-		1. Anji tea has bioactive compounds
-		for health improvement.
-		<br>
-		2. Improve brain functioning
-		<br>
-		3. Soothing and relaxation effect
-		<br>
-		4. Improves you physical performance
-		<br>
-		5. Lower different forms of cancer
-		risks
+<div class="left">
+	<div class="tl">
+		<img id="pot" src="img/pot_1.png" style="max-width: 80%; max-height: 80%">
+	</div>
+	<div class="bl">
+		<a href="pe.html">
+			<img class="navIcon" src="img/pe_icon_bg.png">
+		</a>
 	</div>
 </div>
 
-<div class="side_bar">
-	<a href="lj.html">
-		<img src="img/lj_icon.jpg">
-	</a>
+<div class="center">
+	<img src="img/ajbc_icon_bg.png" style="max-width: 98%; max-height: 98%; min-width: 98%;">
+	<div class="text_body" style="margin-top: 80px; margin-left: 60px; width: 480px;">
+		<div id="cn" style="margin-left: 40px; line-height: 1.5;">
+茶。
+<br>
+香叶、嫩芽。
+<br>
+慕诗客、爱僧家。
+<br>
+碾雕白玉、罗织红纱。
+<br>
+铫煎黄蕊色、碗转曲尘花。
+<br>
+夜后邀陪明月、晨前命对朝霞。
+<br>
+洗尽古今人不倦、将至醉后岂堪夸。
+		</div>
+		<div id="en" style="display: none; font-size: 20px; margin-top: 30px; line-height: 1.9;font-family:wwt;">
+Tea
+<br>
+Balmy leaves, sprouts wee.
+<br>
+Appeal to poets, monks and me.
+<br>
+The carved jade white, the sleek silk bright.
+<br>
+Baked the pistil yellow hue, twirled the floral curls slight.
+<br>
+Invited to view the moonlit night, and usher in the dawning light.
+<br>
+Bathing all the drinkers coming and gone, toasting to the scent that lingers on.
+		</div>
+	</div>
+	<script language="javascript">
+		document.getElementsByClassName("text_body")[0].onmouseover = function() {
+			changeLanguage("cn");
+		}
+		document.getElementsByClassName("text_body")[0].onmouseout = function() {
+			changeLanguage("en");
+		}
+	</script>
+
+</div>
+<div class="right">
+	<div class="tr">
+		<a href="index.html">
+			<img id="chaIcon" src="img/cha_icon.png" style="width: 1000px; height: 1000px;">
+		</a>
+	</div>
+	<div class="br">
+		<a href="lj.html">
+			<img class="navIcon" src="img/lj_icon_bg.png">
+		</a>
+	</div>
+
+	<script type="text/javascript">
+		var navIcons = document.getElementsByClassName("navIcon");
+		for (let i = 0; i < navIcons.length; i++) {
+			navIcons[i].onmouseover = function() {
+				navIcons[i].style.maxWidth = "120%";
+				navIcons[i].style.maxHeight = "120%";
+			};
+			navIcons[i].onmouseout = function() {
+				navIcons[i].style.maxWidth = "100%";
+				navIcons[i].style.maxHeight = "100%";	
+			}
+		}
+	</script>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script  src="js/loadDetails.js"></script>
 
 </body>
 

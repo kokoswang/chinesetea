@@ -5,77 +5,103 @@
 	<link rel="stylesheet" href="css/details.css">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
-	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/loadDetails.js"></script>
+
 	<meta charset="UTF-8">
 	<title>Tie Guan Yin</title>
 </head>
 
 <body>
 
-<div class="top_bar">
-	<a href="index.html">
-		<img src="img/cha_icon.png"">
-	</a>
-</div>
-
-<div class="side_bar">
-	<a href="jjm.html">
-		<img src="img/jjm_icon.jpg">
-	</a>
-</div>
-
-<div class="center">
-	<img src="img/tgy_icon.jpg" style="display: block; margin-left: auto; margin-right: auto; height: 100%; max-height: 100%;">
-	<div id="bg_overlay"></div>
-	<div class="text_body">
-		<div style="width: 100%; height: 80px; margin-top: 30px; font-size: 35px; font-family: 'Cabin', sans-serif; text-align: center;">
-			Tie Guan Yin Oolong
-		</div>
-		Tightly rolled, surprisingly expansive,
-		and brightly floral with a refreshing after
-		taste that seems to linger forever,
-		Tie Guan Yin was undisputedly the most
-		popular loose leaf tea from China in the
-		1990s and 2000s. It is one of China’s
-		most beloved oolongs and is extremely
-		time-consuming to produce. For many
-		Western tea lovers, Tie Guan Yin remains
-		the introduction to Chinese Wu Long tea
-		(Oolong tea) and its variation is the most
-		widely seen form of Wu Long (Oolong)
-		worldwide.
-		<br>
-		Tie Guan Yin is a category of Wu Long
-		(Oolong) academically referred to as Min
-		Nan Wu Long, referencing its origin in the
-		southern Fu Jian Province. Tie Guan Yin is
-		actually the name of the varietal that made
-		this style of Wu Long (Oolong) famous.
-		<br>
-		Tie Guan Yin has a lot health benefits. This
-		Chinese oolong tea is high in amino
-		acids, polyphenols and antioxidants.
-		It contains vitamins,
-		particularly vitamin C, and other
-		components such as calcium, fluorine,
-		iron, magnesium, manganese,
-		phosphorus, potassium and zinc.
+<div class="left">
+	<div class="tl">
+		<img id="pot" src="img/pot_5.png" style="max-width: 100%; max-height: 100%">
+	</div>
+	<div class="bl">
+		<a href="jjm.html">
+			<img class="navIcon" src="img/jjm_icon_bg.png">
+		</a>
 	</div>
 </div>
 
+<div class="center">
+	<img src="img/tgy_icon_bg.png" style="max-width: 100%; max-height: 100%; min-width: 100%;">
+	<div class="text_body" style="margin-top: 200px; margin-left: 120px; width: 400px;">
+		<div id="cn" style="display: none;">
+花神宠秋色,嫦娥矜月桂。
+<br>
+月桂与秋色,美难与茶比。
+<br>
+一为后中英,一为群芳最。
+<br>
+物阜称东土,携来感勇士。
+<br>
+助我清明思,湛然祛烦累。
+<br>
+欣逢后诞辰,祝寿介以此。
+		</div>
+		<div id="en" style="font-size: 18px;font-family:wwt;">
+Venus her Myrtle, Phoebus has his bays;
+<br>
+Tea both excels, which she vouchsafes to praise.
+<br>
+The best of Queens, and best of herbs, we owe.
+<br>
+To that bold nation, which the way did show.
+<br>
+To the fair region where the sun doth rise,
+<br>
+Whose rich productions we so justly prize.
+<br>
+The Muse’s friend, tea does our fancy aid,
+<br>
+Repress those vapours which the head invade.
+<br>
+And keep the palace of the soul serene,
+<br>
+Fit on her birthday to salute the Queen.
+		</div>
+	</div>
+	<script language="javascript">
+		document.getElementsByClassName("text_body")[0].onmouseover = function() {
+			changeLanguage("en");
+		}
+		document.getElementsByClassName("text_body")[0].onmouseout = function() {
+			changeLanguage("cn");
+		}
+	</script>
 
-<div class="side_bar">
-	<a href="blc.html">
-		<img src="img/blc_icon.png">
-	</a>
+</div>
+<div class="right">
+	<div class="tr">
+		<a href="index.html">
+			<img id="chaIcon" src="img/cha_icon.png">
+		</a>
+	</div>
+	<div class="br">
+		<a href="blc.html">
+			<img class="navIcon" src="img/blc_icon_bg.png">
+		</a>
+	</div>
+
+	<script type="text/javascript">
+		var navIcons = document.getElementsByClassName("navIcon");
+		for (let i = 0; i < navIcons.length; i++) {
+			navIcons[i].onmouseover = function() {
+				navIcons[i].style.maxWidth = "120%";
+				navIcons[i].style.maxHeight = "120%";
+			};
+			navIcons[i].onmouseout = function() {
+				navIcons[i].style.maxWidth = "100%";
+				navIcons[i].style.maxHeight = "100%";	
+			}
+		}
+	</script>
 </div>
 
-</div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script  src="js/loadDetails.js"></script>
 
 </body>
 

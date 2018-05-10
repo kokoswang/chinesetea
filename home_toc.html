@@ -5,6 +5,14 @@
 <!-- <link rel="stylesheet" href="/css/styles.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <style type="text/css">
+	@font-face {
+		font-family: "zkklt";
+		src: url("css/zkklt.ttf");
+	}
+	@font-face {
+		font-family: "wwt";
+		src: url("css/wwt.ttf");
+	}
 	body {
 	  animation: fadeIn 1s linear;
 	}
@@ -28,26 +36,43 @@
 	#layout_row {
 		width: 525px;
 		height: 66px;
-		border-color: white;
+		border-color: rgba(0,0,0,0);
 		border-style: dashed;
 	}
 	#layout_col {
 		width: 75px;
 		height: 264px;
 		max-height: 264px;
+		display: inline-block;
+	}
+	#layout_col:hover #entrance_text{
+		display: none;
+	}
+	#layout_col:hover #entrance_text_1{
+		/*display: inline-block;*/
+		visibility: visible;
 	}
 	#icon_box {
 		width: 75px;
 		height: 66px;
-		border-color: white;
+		border-color: rgba(0,0,0,0);
 		border-style: solid;
 		float: left;
 	}
 	#entrance_text {
-		font-family: 'Cabin', sans-serif;
-		font-size: 28px;
-		text-align: center;
+		font-family: 'wwt', sans-serif;
+		font-size: 18px;
 		word-wrap: break-word;
+		padding-top: 25px;
+		padding-left: 35px;
+	}
+	#entrance_text_1 {
+		font-family: 'wwt', sans-serif;
+		font-size: 15px;
+		word-wrap: break-word;
+		padding-top: 25px;
+		padding-left: 35px;
+		visibility: hidden;
 	}
 
 	.icon {
@@ -72,8 +97,12 @@
 	    left: 50%;
 	    margin-left: -60px;
 	}
-	.icon:hover .text_popup {
+/*	.icon:hover .text_popup {
 	    visibility: visible;
+	}*/
+	.icon:hover div {
+		height: 150%;
+		width: 150%;
 	}
 </style>
 
@@ -82,120 +111,135 @@
 	<meta charset="UTF-8">
 </head>
 
-<body style="width:850px; height: 630px">
+<body style="width:790px; height: 630px">
 
-<div style="margin-left: 160px; margin-right: 160px; margin-top: 70px;">
+<div style="margin-left: 130px; margin-right: 130px; margin-top: 70px;">
 	<div id="layout_row">
 		<div style="width: 150px; height: 66px; float: left;"></div>
-		<div id="icon_box">
-			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; margin-top: 70%"></div>
-		</div>
+		<div id="icon_box"></div>
 		<div id="icon_box" style="float: left;">
 			<div class="icon">
 				<div id="jjm_icon">
 				<span class="text_popup">Jin Jun Mei Black Tea</span>
-				<img class="i" src="img/jjm_icon.jpg" style="max-width: 100%; max-height: 100%;">
+				<img class="i" src="img/jjm_icon.png" style="max-width: 130%; max-height: 130%;">
 				</div>
 			</div>
 		</div>
 		<div id="icon_box">
-			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; float: right; margin-top: 70%"></div>
+			<div class="dot"></div>
 		</div>
 	</div>
 	<div id="layout_row">
 		<div style="width: 75px; height: 66px; float: left;"></div>
 		<div id="icon_box">
-			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%;"></div>
+			<div class="icon">
+				<div id="lj_icon">
+				<span class="text_popup">Long Jing Green Tea</span>
+				<img src="img/lj_icon.png" style="max-width: 130%; max-height: 130%;">
+				</div>
+			</div>
 		</div>
 		<div style="width: 225px; height: 66px; float: left;"></div>
 		<div id="icon_box">
-			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%; float: right;"></div>
+			<div class="dot"></div>
 		</div>
 	</div>
 	<div id="layout_col" style="float: left;">
 		<div id="icon_box" style="float: none;">
-			<div class="icon">
-				<div id="lj_icon">
-				<span class="text_popup">Long Jing Green Tea</span>
-				<img src="img/lj_icon.jpg" style="max-width: 100%; max-height: 100%;">
-				</div>
-			</div>
-		</div>
-			<div id="icon_box" style="float: none;">
-			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%;"></div>
+			<div class="dot"></div>
 		</div>
 		<div id="icon_box" style="float: none;">
-			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%;"></div>
+			<div class="dot"></div>
 		</div>
 		<div id="icon_box" style="float: none;">
 			<div class="icon">
 				<div id="ajbc_icon">
 				<span class="text_popup">Anji Bai Cha</span>
-				<img src="img/ajbc_icon.jpg" style="max-width: 100%; max-height: 100%;">
+				<img src="img/ajbc_icon.png" style="max-width: 130%; max-height: 130%;">
 				</div>
 			</div>
 		</div>
+		<div id="icon_box" style="float: none;">
+			<div class="dot"></div>
+		</div>
 	</div>
-	<div id="layout_col" style="width: 375px; display: inline-block; overflow: hidden;">
-		<div id="entrance_text" style="max-height: 264px">
-		<a href="#">
-			<br>
-			<br>Welcome
-			<br>to
-			<br>tea culture
-		</a>
+	<div id="layout_col" style="width: 325px; overflow: hidden; display: inline-block;">
+		<div id="entrance_text" style="max-height: 264px;">
+虽说茶道和古诗都是中国独一无二且博大精深的传统文化
+<br>
+然而它们并没有国界的源远流传着 
+<br>
+有不少外国诗人用自己的语言歌颂着中国茶道 
+<br>
+也有人将中文的茶诗翻译成别国语言 
+<br>
+希望让全世界达到对中国茶道的了解和共鸣
+<br>
+妙的是 尽管没有翻译可以完全还原原作
+<br>
+但在每种语言的版本下
+<br>
+却有了不一样的韵味
+		</div>
+		<div id="entrance_text_1" style="max-height: 264px;">
+Tea ceremony and ancient poetry are unique and profound traditional culture in China
+<br>
+However, their origin spreads and there are no national borders. Many foreign poets use their own language to sing Chinese tea ceremonies. Some also translate Chinese tea poems into other languages. They hope that the world will reach an understanding and resonance of Chinese tea ceremonies.
+<br>
+The wonderful thing is that although there is no translation that can completely restore the original, it has a different flavor under each language version.
 		</div>
 		<script  src="js/entranceText.js"></script>
 	</div>
-	<div id="layout_col" style="float: right;">
+<!-- 	<div id="layout_col" style="width: 325px; display: inline-block; display: none;">
+		<div id="entrance_text" style="max-height: 264px; font-size: 14px;">
+Tea ceremony and ancient poetry are unique and profound traditional culture in China
+<br>
+However, their origin spreads and there are no national borders. Many foreign poets use their own language to sing Chinese tea ceremonies. Some also translate Chinese tea poems into other languages. They hope that the world will reach an understanding and resonance of Chinese tea ceremonies.
+<br>
+The wonderful thing is that although there is no translation that can completely restore the original, it has a different flavor under each language version.
+		</div>
+		<script  src="js/entranceText.js"></script>
+	</div> -->
+	<div id="layout_col" style="float: right; padding-right: 50px;">
 		<div id="icon_box" style="float: none;">
 			<div class="icon">
 				<div id="tgy_icon">
 				<span class="text_popup">Tie Guan Yin Oolong</span>
-				<img src="img/tgy_icon.jpg" style="max-width: 100%; max-height: 100%;">
+				<img src="img/tgy_icon.png" style="max-width: 130%; max-height: 130%;">
 				</div>
 			</div>
 		</div>
 		<div id="icon_box" style="float: none;">
-			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%; float: right;"></div>
+			<div class="dot"></div>
 		</div>
 		<div id="icon_box" style="float: none;">
-			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; float: right;"></div>
+			<div class="dot"></div>
 		</div>
 		<div id="icon_box" style="float: none;">
 			<div class="icon">
 				<div id="blc_icon">
 				<span class="text_popup">Bi Luo Chun</span>
-				<img src="img/blc_icon.png" style="max-width: 100%; max-height: 100%;">
+				<img src="img/blc_icon.png" style="max-width: 130%; max-height: 130%;">
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="layout_row">
-		<div style="width: 75px; height: 66px; float: left;"></div>
-		<div id="icon_box">
-			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; margin-top: 70%"></div>
-		</div>
-		<div style="width: 225px; height: 66px; float: left;"></div>
-		<div id="icon_box">
-			<div class="dot"><img src="img/s_icon.png" style="max-width: 25%; max-height: 25%; float: right; margin-top: 70%"></div>
-		</div>
-	</div>
+
 	<div id="layout_row">
 		<div style="width: 150px; height: 66px; float: left;"></div>
 		<div id="icon_box">
-			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%;"></div>
+			<div class="dot"></div>
 		</div>
 		<div id="icon_box">
 			<div class="icon">
 				<div id="pe_icon">
 				<span class="text_popup">Pu Erh Tea</span>
-				<img src="img/pe_icon.jpg" style="max-width: 100%; max-height: 100%;">
+				<img src="img/pe_icon.png" style="max-width: 130%; max-height: 130%;">
 				</div>
 			</div>
 		</div>
 		<div id="icon_box">
-			<div class="dot"><img src="img/L_icon.png" style="max-width: 50%; max-height: 50%; float: right;"></div>
+			<div class="dot"></div>
 		</div>
 </div>
 

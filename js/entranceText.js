@@ -23,7 +23,7 @@ function iconClickFadeOutCB(sel, uid, url) {
 	var nameMap = new Map();
 	nameMap.set("jjm", "Jin Jun Mei Black Tea");
 	nameMap.set("lj", "Long Jing Green Tea");
-	nameMap.set("tgy", "Tie Guan Yin Ooloong");
+	nameMap.set("tgy", "Tie Guan Yin Oolong");
 	nameMap.set("ajbc", "Anji Bai Cha");
 	nameMap.set("blc", "Bi Luo Chun");
 	nameMap.set("pe", "Pu Erh Tea");
@@ -35,16 +35,6 @@ function iconClickFadeOutCB(sel, uid, url) {
 			window.parent.location.href=url;
 		}, 1500);
 	});
-
-
-
-	// var rect = document.getElementById(sel.attr("id")).getBoundingClientRect();
-	// sel.css({position: "fixed", left: rect.left+"px", top: rect.top+"px", width: rect.width});
-	// sel.animate({width: "120px", left: "260px", top: "260px"}, 1000, function() {
-	// 	sel.fadeOut("slow", function() {
-	// 		window.parent.location.href=url;
-	// 	});
-	// });
 }
 
 function setupPage() {
@@ -60,6 +50,7 @@ function setupPage() {
 		let idx = i;
 		$("#"+id).click(function() {
 			console.log(idx);
+			document.getElementById("entrance_text_1").innerHTML = "";
 			for (let j = 0; j < icons.length; j++) {
 				if (j != idx) {
 					$("#"+icons[j]+"_icon").fadeOut("fast");
